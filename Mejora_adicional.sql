@@ -19,6 +19,7 @@ INSERT INTO retroalimentacion(viaje_id, usuario_id, rating, comentario, fecha_en
   (4, 3, 2, 'Mala atención, queja',     '2025-04-05'),
   (5, 2, 5, 'Muy rápido y cómodo',      '2025-04-06'),
   (6, 1, 4, 'Buen precio',              '2025-04-07');
+-- ......95+
 
 -- continuamos con las consultas
 -- 1 Promedio de rating por estación
