@@ -1,0 +1,1 @@
+- Consultas para auditoría de tarjetas
