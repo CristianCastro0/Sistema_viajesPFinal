@@ -1,4 +1,4 @@
--- Se agregan datos a la tabla promociones:
+--Se agregan datos a la tabla promociones
 INSERT INTO promociones(nombre, descripcion) VALUES
   ('bonus_enero', 'Bonificación de enero'),
   ('descuento_5', '5% de descuento'),
