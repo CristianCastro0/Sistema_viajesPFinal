@@ -41,7 +41,7 @@ INSERT INTO validaciones(viaje_id, dispositivo_id, fecha_validacion) VALUES
 
 -- Consultas
 
--- 3.1 Viajes sin registro de validación
+--1 Viajes sin registro de validación
 SELECT
   v.viaje_id,
   v.fecha,
@@ -50,7 +50,7 @@ FROM viajes v
 LEFT JOIN validaciones va ON v.viaje_id = va.viaje_id
 WHERE va.validacion_id IS NULL;
 
--- 3.2 Validaciones realizadas por dispositivos de tipo móvil en abril de 2025
+--2 Validaciones realizadas por dispositivos de tipo móvil en abril de 2025
 SELECT
   d.dispositivo_id,
   d.ubicacion,
@@ -63,7 +63,7 @@ WHERE d.tipo = 'móvil'
 GROUP BY d.dispositivo_id, d.ubicacion
 ORDER BY total_validaciones DESC;
 
--- 3.3 Dispositivo con mayor cantidad de validaciones
+-- 3 Dispositivo con mayor cantidad de validaciones
 SELECT
   va.dispositivo_id,
   COUNT(*) AS total_validaciones
