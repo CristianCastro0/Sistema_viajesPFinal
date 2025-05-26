@@ -128,3 +128,77 @@ Estadísticas de uso según dispositivo y retroalimentación.
 Facilita la toma de decisiones operativas y de negocio.
 
 Este README sirve como base para extender aún más el sistema y adaptarlo a nuevos requerimientos.
+
+## Diagrama de Entidad-Relación
+
+```mermaid
+erDiagram
+    USUARIOS {
+        INT usuario_id PK
+        VARCHAR nombre
+        VARCHAR apellido
+        VARCHAR genero
+        DATE fecha_registro
+        DATE fecha_nacimiento
+        VARCHAR correo_electronico
+        VARCHAR celular
+        VARCHAR ciudad_nacimiento
+        INT localidad_id FK
+    }
+    LOCALIDADES {
+        INT localidad_id PK
+        VARCHAR nombre
+    }
+    TARJETAS {
+        INT tarjeta_id PK
+        INT usuario_id FK
+        DATE fecha_adquisicion
+        VARCHAR estado
+        DATE fecha_actualizacion
+    }
+    RECARGAS {
+        INT recarga_id PK
+        DATE fecha
+        NUMERIC monto
+        INT punto_recarga_id FK
+        INT tarjeta_id FK
+        INT promocion_id FK
+    }
+    PUNTOS_RECARGA {
+        INT punto_recarga_id PK
+        VARCHAR direccion
+        INT localidad_id FK
+    }
+    ESTACIONES {
+        INT estacion_id PK
+        VARCHAR nombre
+        INT localidad_id FK
+    }
+    TARIFAS {
+        INT tarifa_id PK
+        NUMERIC valor
+    }
+    VIAJES {
+        INT viaje_id PK
+        DATE fecha
+        INT estacion_abordaje_id FK
+        INT tarifa_id FK
+        INT tarjeta_id FK
+    }
+
+    LOCALIDADES ||--o{ USUARIOS          : tiene
+    LOCALIDADES ||--o{ PUNTOS_RECARGA    : ubica
+    LOCALIDADES ||--o{ ESTACIONES        : ubica
+
+    USUARIOS ||--o{ TARJETAS           : posee
+    TARJETAS ||--o{ RECARGAS           : recibe
+    TARJETAS ||--o{ VIAJES             : usa
+
+    PUNTOS_RECARGA ||--o{ RECARGAS       : registra
+
+    ESTACIONES ||--o{ VIAJES            : inicia
+
+    TARIFAS ||--o{ VIAJES               : fija
+
+    RECARGAS }o--|| PROMOCIONES         : aplica
+
