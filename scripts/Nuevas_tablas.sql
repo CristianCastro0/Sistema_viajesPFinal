@@ -32,7 +32,7 @@ dispositivo_id INT REFERENCES dispositivos(dispositivo_id),
 fecha_validacion DATE NOT NULL
 );
 
---tabla retroalimentacion
+--tabla retroalimentacion mejora
 CREATE TABLE retroalimentacion (
 retro_id SERIAL PRIMARY KEY,
 viaje_id INT REFERENCES viajes(viaje_id),
