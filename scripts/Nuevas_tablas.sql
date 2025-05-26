@@ -1,4 +1,5 @@
 - Creación de nuevas tablas
+    
 -- tabla Tarjeta auditoria
 CREATE TABLE tarjeta_auditoria (
 auditoria_id SERIAL PRIMARY KEY,
@@ -16,18 +17,18 @@ descripcion TEXT
 );
 ALTER TABLE recargas ADD COLUMN promocion_id INT REFERENCES promociones(promocion_id);
 
---dispositivo
+-- tabla dispositivo
 CREATE TABLE dispositivos (
-    dispositivo_id SERIAL PRIMARY KEY,
-    tipo VARCHAR(50) NOT NULL,
-    ubicacion VARCHAR(100)
+dispositivo_id SERIAL PRIMARY KEY,
+tipo VARCHAR(50) NOT NULL,
+ubicacion VARCHAR(100)
 );
 
-CREATE TABLE dispositivo_validacion (
-    id SERIAL PRIMARY KEY,
-    viaje_id INTEGER NOT NULL,
-    dispositivo_id INTEGER NOT NULL,
-    fecha_validacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (viaje_id) REFERENCES viajes(viaje_id),
-    FOREIGN KEY (dispositivo_id) REFERENCES dispositivos(dispositivo_id)
+--tabla validcion
+CREATE TABLE validaciones (
+validacion_id SERIAL PRIMARY KEY,
+viaje_id INT REFERENCES viajes(viaje_id),
+dispositivo_id INT REFERENCES dispositivos(dispositivo_id),
+fecha_validacion DATE NOT NULL
 );
+
