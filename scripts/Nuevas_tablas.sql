@@ -1,11 +1,11 @@
 - Creación de nuevas tablas
 
-CREATE TABLE auditoria_estado_tarjeta (
-    id SERIAL PRIMARY KEY,
-    tarjeta_id INTEGER NOT NULL,
-    estado_anterior VARCHAR(50),
-    estado_nuevo VARCHAR(50),
-    fecha_cambio TIMESTAMP NOT NULL DEFAULT NOW()
+CREATE TABLE tarjeta_auditoria (
+auditoria_id SERIAL PRIMARY KEY,
+tarjeta_id INT NOT NULL REFERENCES tarjetas(tarjeta_id),
+estado_anterior VARCHAR(20),
+estado_nuevo VARCHAR(20),
+fecha_cambio DATE NOT NULL
 );
 
 CREATE TABLE dispositivos (
