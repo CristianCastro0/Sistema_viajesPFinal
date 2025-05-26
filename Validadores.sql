@@ -23,6 +23,7 @@ INSERT INTO dispositivos(tipo, ubicacion) VALUES
   ('móvil',     'Validador móvil A'),
   ('torniquete','Torniquete Norte'),
   ('móvil',     'Validador móvil B');
+-- ...... 97+
 
 INSERT INTO viajes(fecha, estacion_abordaje_id, tarifa_id, tarjeta_id) VALUES
   ('2025-04-01', 1, 1, 1),
@@ -38,6 +39,7 @@ INSERT INTO validaciones(viaje_id, dispositivo_id, fecha_validacion) VALUES
   (3, 1, '2025-04-03'),
   (4, 3, '2025-04-04'),
   (5, 1, '2025-04-05');
+-- ....... 95+
 
 -- Consultas
 
