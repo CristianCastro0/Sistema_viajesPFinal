@@ -1,4 +1,4 @@
--- insertamos datos de ejemplo
+-- insertamos datos de ejemplo mejora
 INSERT INTO retroalimentacion(viaje_id, usuario_id, rating, comentario, fecha_envio) VALUES
   (1, 1, 5, 'Excelente servicio',       '2025-04-02'),
   (2, 2, 3, 'Regular, un poco lento',   '2025-04-03'),
