@@ -1,8 +1,13 @@
-📌 Introducción
+## Integrantes
+
+Brayan S. Fuentes Rios
+Cristian C. Castelblanco Castro
+
+## 📌 Introducción
 
 Este documento describe el proyecto de Sistema de Viajes y Recargas, su diseño de base de datos, las mejoras implementadas y ejemplos de consultas SQL que validan su correcto funcionamiento. Está pensado como guía rápida para desarrolladores y analistas.
 
-🎯 Objetivos Generales
+## 🎯 Objetivos Generales
 
 Diseño y normalización de una base de datos relacional que soporte operaciones de recarga y registro de viajes.
 
@@ -14,7 +19,7 @@ Registrar la fuente de validación de cada viaje (dispositivo físico o móvil).
 
 Proponer y añadir una mejora adicional que aporte valor al análisis de la operación.
 
-📂 Estructura de la Base de Datos
+## 📂 Estructura de la Base de Datos
 
 USUARIOS: datos personales y fecha de registro.
 
@@ -32,7 +37,7 @@ TARIFAS: valores asociados a cada viaje.
 
 LOCALIDADES: nombres y claves primarias.
 
-🛠 Mejoras Implementadas
+## 🛠 Mejoras Implementadas
 
 1. Auditoría del Estado de Tarjetas
 
@@ -82,7 +87,7 @@ Top 3 usuarios con más comentarios.
 
 Comentarios que contengan “queja”.
 
-🚀 Población de Datos de Prueba
+## 🚀 Población de Datos de Prueba
 
 Se incluyen scripts INSERT con datos de ejemplo para:
 
@@ -106,7 +111,7 @@ Correr las consultas descritas en la sección de mejoras.
 
 Verificar los resultados y analizar la información.
 
-🔍 Ejemplo de Consulta
+## 🔍 Ejemplo de Consulta
 
 -- Top 5 tarjetas con más cambios de estado
 
@@ -116,7 +121,7 @@ GROUP BY tarjeta_id
 ORDER BY cambios DESC
 LIMIT 5;
 
-📈 Conclusiones
+## 📈 Conclusiones
 
 La ampliación del modelo de datos con auditorías, promociones, validaciones y retroalimentación permite:
 
@@ -185,6 +190,11 @@ erDiagram
         INT estacion_abordaje_id FK
         INT tarifa_id FK
         INT tarjeta_id FK
+    }
+   PROMOCIONES {
+        INT promocion_id PK
+        VARCHAR nombre
+        TEXT descripcion  
     }
 
     LOCALIDADES ||--o{ USUARIOS          : tiene
