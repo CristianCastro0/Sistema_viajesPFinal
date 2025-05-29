@@ -109,6 +109,7 @@ Verificar los resultados y analizar la información.
 🔍 Ejemplo de Consulta
 
 -- Top 5 tarjetas con más cambios de estado
+
 SELECT tarjeta_id, COUNT(*) AS cambios
 FROM tarjeta_auditoria
 GROUP BY tarjeta_id
