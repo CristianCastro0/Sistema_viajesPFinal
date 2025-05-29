@@ -1,7 +1,6 @@
 -- Mejora propuesta y consultas
--- Registro de opiniones de usuarios sobre viajes
 
---inicamos creando la tabla
+-Creacion de la tabla
 CREATE TABLE retroalimentacion (
 retro_id SERIAL PRIMARY KEY,
 viaje_id INT REFERENCES viajes(viaje_id),
