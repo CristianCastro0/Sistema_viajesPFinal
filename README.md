@@ -136,7 +136,7 @@ Facilita la toma de decisiones operativas y de negocio.
 Este README sirve como base para extender aún más el sistema y adaptarlo a nuevos requerimientos.
 
 ## Diagrama de Entidad-Relación
-
+ 
 ```mermaid
 erDiagram
     USUARIOS {
@@ -161,6 +161,18 @@ erDiagram
         DATE fecha_adquisicion
         VARCHAR estado
         DATE fecha_actualizacion
+    }
+    TARJETA_AUDITORIA {
+        INT auditoria_id PK
+        INT tarjeta_id FK
+        VARCHAR estado_anterior
+        VARCHAR estado_nuevo
+        DATE fecha_cambio
+    }
+    PROMOCIONES {
+        INT promocion_id PK
+        VARCHAR nombre
+        TEXT descripcion
     }
     RECARGAS {
         INT recarga_id PK
@@ -191,25 +203,46 @@ erDiagram
         INT tarifa_id FK
         INT tarjeta_id FK
     }
-   PROMOCIONES {
-        INT promocion_id PK
-        VARCHAR nombre
-        TEXT descripcion  
+    VALIDADORES {
+        INT dispositivo_id PK
+        VARCHAR tipo
+        VARCHAR ubicacion
     }
-
+    VALIDACIONES {
+        INT validacion_id PK
+        INT viaje_id FK
+        INT dispositivo_id FK
+        DATE fecha_validacion
+    }
+    RETROALIMENTACION {
+        INT retro_id PK
+        INT viaje_id FK
+        INT usuario_id FK
+        INT rating
+        TEXT comentario
+        DATE fecha_envio
+    }
+ 
     LOCALIDADES ||--o{ USUARIOS          : tiene
     LOCALIDADES ||--o{ PUNTOS_RECARGA    : ubica
     LOCALIDADES ||--o{ ESTACIONES        : ubica
-
+ 
     USUARIOS ||--o{ TARJETAS           : posee
     TARJETAS ||--o{ RECARGAS           : recibe
     TARJETAS ||--o{ VIAJES             : usa
-
+    TARJETAS ||--o{ TARJETA_AUDITORIA  : audita
+ 
     PUNTOS_RECARGA ||--o{ RECARGAS       : registra
-
+ 
     ESTACIONES ||--o{ VIAJES            : inicia
-
+ 
     TARIFAS ||--o{ VIAJES               : fija
-
+ 
     RECARGAS }o--|| PROMOCIONES         : aplica
-
+ 
+    VIAJES ||--o{ VALIDACIONES         : validado_por
+    VALIDACIONES }o--|| VALIDADORES       : usa
+ 
+    VIAJES ||--o{ RETROALIMENTACION    : reseña
+    USUARIOS ||--o{ RETROALIMENTACION   : escribe
+ 
