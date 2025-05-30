@@ -1,5 +1,6 @@
 --  Datos de ejemplo
 -- Se agregan a la tabla tarjeta_auditoria 100 datos para poder realizar las respectivas consultas, de esta tabla se toma la tarjeta_id(tabla tarjeta), el estado anterior, el estado nuevo y la fecha en la que se hace el respectivo cambio.
+
 INSERT INTO tarjeta_auditoria(tarjeta_id, estado_anterior, estado_nuevo, fecha_cambio) VALUES
 (1, 'Activa',    'Bloqueada',    '2024-01-15'),
 (1, 'Bloqueada', 'Activa',       '2024-02-10'),
