@@ -1,4 +1,4 @@
--- continuamos con las consultas
+-- Consultas de la mejora planteda
 -- 1 Promedio de rating por estación
 SELECT
   e.nombre      AS estacion,
