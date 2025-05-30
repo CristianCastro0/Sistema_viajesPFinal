@@ -3,7 +3,7 @@ Se insertan datos en las tablas:
 INSERT INTO dispositivos(tipo, ubicacion) VALUES
 ('móvil',     'Validador móvil A'),
 ('torniquete','Torniquete Norte'),
-('móvil',     'Validador móvil B');
+('móvil',     'Validador móvil B'),
 ('móvil', 'Estación Central'),
 ('torniquete', 'Estación Central'),
 ('lector QR', 'Estación Norte'),
