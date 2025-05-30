@@ -1,6 +1,7 @@
 ## Integrantes
 
 Brayan S. Fuentes Rios
+
 Cristian C. Castelblanco Castro
 
 ## 📌 Introducción
