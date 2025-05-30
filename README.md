@@ -148,7 +148,7 @@ Para realizar las pruebas, sigue estos pasos:
 
  para el tercer punto Validadores Insertar los  datos en las sigientes tablas
  
-**VALIDADORES**
+**DISPOSITIVOS**
  
 **VALIDACIONES**
 
@@ -256,7 +256,7 @@ erDiagram
         INT tarifa_id FK
         INT tarjeta_id FK
     }
-    VALIDADORES {
+    DISPOSITIVOS {
         INT dispositivo_id PK
         VARCHAR tipo
         VARCHAR ubicacion
