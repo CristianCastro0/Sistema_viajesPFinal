@@ -1,4 +1,4 @@
-- Creación de nuevas tablas
+-- Creación de nuevas tablas
     
 -- tabla Tarjeta auditoria
 CREATE TABLE tarjeta_auditoria (
