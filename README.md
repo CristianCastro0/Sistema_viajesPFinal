@@ -87,29 +87,53 @@ Top 3 usuarios con más comentarios.
 
 Comentarios que contengan “queja”.
 
+
 ## 🚀 Población de Datos de Prueba
+ 
+Se incluyen datos de ejemplo que permiten validar el funcionamiento del sistema y verificar que las consultas arrojan resultados coherentes. La población de datos se organiza en las siguientes categorías:
+ 
+Estados de tarjetas (auditoría): Cambios de estado de las tarjetas a lo largo del tiempo.
+ 
+Promociones y recargas: Diferentes tipos de promociones aplicadas a recargas realizadas por los usuarios.
+ 
+Dispositivos y validaciones: Validaciones realizadas por los usuarios al momento de abordar mediante distintos dispositivos.
+ 
+Retroalimentación de usuarios: Comentarios, calificaciones y fechas relacionados con los viajes realizados.
+ 
+ 
+ 
+## 📋 Ejecución de Consultas
+ 
+Para realizar las pruebas, sigue estos pasos:
+ 
+1. Importar las tablas (DDL): Ejecuta el script que crea todas las tablas en PostgreSQL.
+ 
+ 
+2. Insertar los datos de prueba: Ejecuta los scripts INSERT que contienen los datos mencionados anteriormente. Es importante seguir este orden:
 
-Se incluyen scripts INSERT con datos de ejemplo para:
+ para el primer punto Auditoria Insertar los datos en las siguientes tablas
+ 
+**TARJETA_AUDITORIA**
+ 
+ para el segundo punto Promociones Inertar los datos en las siguientes tablas
+ 
+**PROMOCIONES**
 
-Estados de tarjetas (auditoría).
+ para el tercer punto Validadores Insertar los  datos en las sigientes tablas
+ 
+**VALIDADORES**
+ 
+**VALIDACIONES**
 
-Promociones y recargas.
-
-Dispositivos y validaciones.
-
-Retroalimentación de usuarios.
-
-Estos datos permiten verificar que las consultas arrojan resultados coherentes.
-
-📋 Ejecución de Consultas
-
-Importar el DDL de creación de tablas en PostgreSQL.
-
-Ejecutar los INSERT de datos de ejemplo.
-
-Correr las consultas descritas en la sección de mejoras.
-
-Verificar los resultados y analizar la información.
+Para el cuarto punto Retroalimentacion (Mejora) Insertar los datos en las siguientes tablas
+ 
+**RETROALIMENTACION**
+ 
+3. Ejecutar las consultas: Dirígete a la sección de Scripts y consultas, copia las consultas y ejecútalas en el entorno de PostgreSQL.
+ 
+ 
+4. Verificar resultados: Asegúrate de que los datos devueltos tengan sentido respecto a los datos de ejemplo y analiza la información obtenida.
+ 
 
 ## 🔍 Ejemplo de Consulta
 
