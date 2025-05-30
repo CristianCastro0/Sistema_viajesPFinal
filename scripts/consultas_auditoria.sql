@@ -1,4 +1,4 @@
-- Consultas para auditoría de tarjetas
+-- Consultas para auditoría de tarjetas
   
 -- 1. Cantidad de cambios de estado por mes durante el último año
 SELECT
