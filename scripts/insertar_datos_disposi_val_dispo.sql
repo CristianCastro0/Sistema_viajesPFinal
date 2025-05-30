@@ -1,4 +1,5 @@
-Se insertan datos en las tablas:
+-- Se insertan datos en las tablas:
+-- Se agregan 100 registros a la tabla dispositivos para asi pdoer realiazr las respectivas consultas, de estos datos agregamos el tipo de dispositivos y la ubicacion.
 
 INSERT INTO dispositivos(tipo, ubicacion) VALUES
 ('móvil',     'Validador móvil A'),
