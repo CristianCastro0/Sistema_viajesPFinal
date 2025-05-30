@@ -24,7 +24,7 @@ tipo VARCHAR(50) NOT NULL,
 ubicacion VARCHAR(100)
 );
 
---tabla validcion
+--tabla validacion
 CREATE TABLE validaciones (
 validacion_id SERIAL PRIMARY KEY,
 viaje_id INT REFERENCES viajes(viaje_id),
@@ -32,7 +32,7 @@ dispositivo_id INT REFERENCES dispositivos(dispositivo_id),
 fecha_validacion DATE NOT NULL
 );
 
---tabla retroalimentacion mejora
+--tabla retroalimentacion (mejora planteda)
 CREATE TABLE retroalimentacion (
 retro_id SERIAL PRIMARY KEY,
 viaje_id INT REFERENCES viajes(viaje_id),
