@@ -294,7 +294,7 @@ erDiagram
     RECARGAS }o--|| PROMOCIONES         : aplica
  
     VIAJES ||--o{ VALIDACIONES         : validado_por
-    VALIDACIONES }o--|| VALIDADORES       : usa
+    VALIDACIONES }o--|| DISPOSITIVOS       : usa
  
     VIAJES ||--o{ RETROALIMENTACION    : reseña
     USUARIOS ||--o{ RETROALIMENTACION   : escribe
