@@ -1,5 +1,6 @@
 - Consultas para auditoría de tarjetas
-1. Cantidad de cambios de estado por mes durante el último año
+  
+-- 1. Cantidad de cambios de estado por mes durante el último año
 SELECT
   EXTRACT(YEAR FROM fecha_cambio) AS año,
   EXTRACT(MONTH FROM fecha_cambio) AS mes,
@@ -9,7 +10,7 @@ WHERE fecha_cambio >= date_trunc('year', current_date) - INTERVAL '1 year'
 GROUP BY año, mes
 ORDER BY año, mes;
 
-2. Las 5 tarjetas con mayor número de cambios de estado
+-- 2. Las 5 tarjetas con mayor número de cambios de estado
 SELECT
   tarjeta_id,
   COUNT(*) AS cantidad_cambios
