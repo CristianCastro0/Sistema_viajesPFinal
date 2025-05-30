@@ -2,7 +2,7 @@
 INSERT INTO promociones(nombre, descripcion) VALUES
   ('bonus_enero', 'Bonificación de enero'),
   ('descuento_5', '5% de descuento'),
-  ('bonus_vip',    'Bono VIP especial');
+  ('bonus_vip',    'Bono VIP especial'),
 ('Bono de bienvenida 1', 'Bono de $3.000 para nuevos usuarios'),
 ('Bono de bienvenida 2', 'Bono de $3.000 para nuevos usuarios'),
 ('Bono de bienvenida 3', 'Bono de $3.000 para nuevos usuarios'),
