@@ -11,7 +11,7 @@ INSERT INTO tarjeta_auditoria(tarjeta_id, estado_anterior, estado_nuevo, fecha_c
 (3, 'Bloqueada', 'Activa',       '2024-07-03'),
 (1, 'Bloqueada', 'Cancelada',    '2024-08-17'),
 (2, 'Activa',    'Bloqueada',    '2024-09-22'),
-(3, 'Activa',    'Cancelada',    '2024-10-30');
+(3, 'Activa',    'Cancelada',    '2024-10-30'),
 (1, NULL, 'activa', '2024-01-10 09:00'),
 (1, 'activa', 'bloqueada', '2024-02-15 10:30'),
 (1, 'bloqueada', 'activa', '2024-03-20 14:00'),
