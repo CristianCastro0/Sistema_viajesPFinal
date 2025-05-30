@@ -1,4 +1,6 @@
--- insertamos datos de ejemplo mejora
+ -- insertamos datos de ejemplo mejora
+-- Se agregan 100 datos de referencia para la tabla de retroalimentación, donde se trae consigo el viaje_id, el usuario_id, tomamos el rating, el cual puede ser de 1 a 5, donde tambien puede dejar un comentario de como le pareció el viaje y por ultimo la fecha.
+
 INSERT INTO retroalimentacion(viaje_id, usuario_id, rating, comentario, fecha_envio) VALUES
   (1, 1, 5, 'Excelente servicio',       '2025-04-02'),
   (2, 2, 3, 'Regular, un poco lento',   '2025-04-03'),
