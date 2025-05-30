@@ -1,5 +1,6 @@
 --Se agregan datos a la tabla promociones
 -- Se agregan a la tabla promociones 100 resgistros, donde se agrega el nombre de la promocion y su respectiva descripción.
+
 INSERT INTO promociones(nombre, descripcion) VALUES
   ('bonus_enero', 'Bonificación de enero'),
   ('descuento_5', '5% de descuento'),
