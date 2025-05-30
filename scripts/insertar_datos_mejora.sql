@@ -7,7 +7,7 @@ INSERT INTO retroalimentacion(viaje_id, usuario_id, rating, comentario, fecha_en
   (3, 1, 4, 'Buen viaje',               '2025-04-04'),
   (4, 3, 2, 'Mala atención, queja',     '2025-04-05'),
   (5, 2, 5, 'Muy rápido y cómodo',      '2025-04-06'),
-  (6, 1, 4, 'Buen precio',              '2025-04-07');
+  (6, 1, 4, 'Buen precio',              '2025-04-07'),
   (75, 10, 2, 'Servicio algo lento',        '2025-12-12'),
   (88, 96, 5, 'Excelente atención',        '2025-05-27'),
   (6, 45, 2, 'Podría mejorar limpieza',    '2025-11-07'),
